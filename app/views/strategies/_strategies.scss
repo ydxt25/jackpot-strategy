@@ -1,0 +1,15 @@
+.widget-strategy-selector {
+  .input-group select.input-control {
+    height: 37px;
+
+    option {
+      text-align: center;
+    }
+  }
+
+  label {
+    display: block;
+    line-height: 30px;
+  }
+}
+

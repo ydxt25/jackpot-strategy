@@ -1,0 +1,26 @@
+.widget-wrapper {
+  width: 100%;
+  margin: auto;
+
+  &, * {
+    box-sizing: border-box;
+  }
+
+  @import "../vendor/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+  @import "bootstrap/grid-vars";
+  @import "../vendor/bootstrap-sass/assets/stylesheets/bootstrap/mixins/clearfix";
+  @import "bootstrap/grid-framework";
+  @import "../vendor/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
+  @import "bootstrap/grid";
+  @import "jq-steps";
+  @import "owl";
+  @import "animate";
+  @import "tel-input";
+
+  @import "colors";
+  @import "common";
+  @import "../app/views/form/form";
+  @import "../app/views/strategies/strategies";
+  @import "../app/views/games/games";
+  @import "../app/views/generator/generator";
+}

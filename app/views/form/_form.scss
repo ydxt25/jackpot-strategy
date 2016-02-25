@@ -1,0 +1,33 @@
+.widget-form-container {
+  padding-left: 0;
+  padding-right: 0;
+
+  .widget-form {
+    position: relative;
+
+    button {
+      margin-top: 12px;
+    }
+
+    .form-loading {
+      margin-top: 26px;
+    }
+
+    label {
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: bold;
+    }
+
+    h3.form-error {
+      text-align: center;
+      margin: 0;
+      background: #AF0505;
+      color: #fff;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+}

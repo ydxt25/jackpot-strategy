@@ -1,0 +1,58 @@
+.widget-generator {
+  margin-bottom: 21px;
+
+  .draw-line {
+    width: 100%;
+    margin-bottom: 40px;
+    float: left;
+    text-align: center;
+    border: 1px solid #5EA9DD;
+    padding: 5px;
+  }
+
+  .draw-pick {
+    display: inline-block;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    margin: 3px;
+    text-align: center;
+    color: #5EA9DD;
+    padding: 1px;
+    border-radius: 100%;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 21px;
+    border: 2px solid #5EA9DD;
+    transition: 0.5s background, color
+  }
+
+  .draw-pick.special-pick {
+    border: 2px solid #f99353;
+    color: #f99353;
+  }
+
+  .draw-pick.picked.special-pick {
+    background: #f99353;
+    color: #fff;
+  }
+
+  .draw-pick.picked {
+    background: #5EA9DD;
+    color: #fff;
+  }
+
+  .generate-btn {
+    padding: 9px 27px;
+    width: 100%;
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    font-size: 27px;
+  }
+
+  p.generated-text {
+    margin-top: 0;
+  }
+}

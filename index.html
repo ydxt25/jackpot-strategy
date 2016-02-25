@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="css/style.css"/>
+	<style>
+		body {
+			margin-top: 50px;
+			font-family: arial sans-serif;
+		}
+
+		.widget-wrapper {
+			max-width: 950px;
+		}
+	</style>
+</head>
+<body>
+<div id="widget-el"></div>
+<!-- bower:js -->
+<script src="vendor/jquery/dist/jquery.js"></script>
+<script src="vendor/underscore/underscore.js"></script>
+<script src="vendor/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+<script src="vendor/owl.carousel/dist/owl.carousel.js"></script>
+<script src="vendor/chance/chance.js"></script>
+<script src="vendor/jquery-validation/dist/jquery.validate.js"></script>
+<script src="vendor/intl-tel-input/build/js/intlTelInput.js"></script>
+<script src="vendor/intl-tel-input/build/js/utils.js"></script>
+<script src="vendor/jquery.countdown/dist/jquery.countdown.js"></script>
+<!-- endbower -->
+<script src="vendor/jq-steps/jQSteps.js"></script>
+<!-- inject:js -->
+<script src="app/app.js"></script>
+<script src="app/tmp/templates.js"></script>
+<script src="app/common/events.js"></script>
+<script src="app/common/generator.js"></script>
+<script src="app/common/validator.js"></script>
+<script src="app/common/view.js"></script>
+<script src="app/common/widget.js"></script>
+<script src="app/common/generators/dates.js"></script>
+<script src="app/common/generators/default.js"></script>
+<script src="app/common/generators/games.js"></script>
+<script src="app/common/rules/form.js"></script>
+<script src="app/views/form/form.js"></script>
+<script src="app/views/games/games.js"></script>
+<script src="app/views/generator/generator.js"></script>
+<script src="app/views/strategies/strategies.js"></script>
+<script src="app/widgets/default/default.js"></script>
+<script src="app/widgets/game/game.js"></script>
+<!-- endinject -->
+<script>
+	$('#widget-el').TMLotto('default', {
+		campaignId: 1,
+		form: {
+			values: {
+				email: "test@test.com"
+			}
+		}
+	});
+
+</script>
+</body>
+</html>
