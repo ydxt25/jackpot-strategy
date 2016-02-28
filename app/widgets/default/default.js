@@ -76,9 +76,9 @@ widgetApp.addWidget('default', function(options) {
     });
 
     //self.renderView('strategies', '#strategy-step', {});
-    jqSteps.next();
-    self.renderView('strategies', '#strategy-step', {});
+    //jqSteps.next();
+    //self.renderView('strategies', '#strategy-step', {});
 
-    //this.renderView('form', '#form-step', options);
+    this.renderView('form', '#form-step', options);
 
 });
