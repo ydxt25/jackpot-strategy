@@ -1,6 +1,15 @@
 .widget-wrapper {
   width: 100%;
   margin: auto;
+  max-width: 850px;
+
+  .container-fluid {
+    padding: 0 !important;
+
+    .step-body {
+      padding: 0 15px;
+    }
+  }
 
   &, * {
     box-sizing: border-box;

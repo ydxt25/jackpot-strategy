@@ -8,6 +8,9 @@
 
     button {
       margin-top: 12px;
+      max-width: 210px;
+      position: relative;
+      font-size: 16px;
     }
 
     .form-loading {
@@ -38,8 +41,9 @@
 
       img {
         background: #04214C;
-        right: 17px;
-        top: 11px;
+        right: 6px;
+        top: -10px;
+        padding: 5px 7px;
       }
     }
   }

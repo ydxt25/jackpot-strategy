@@ -1,6 +1,7 @@
 .widget-wrapper {
   width: 100%;
   margin: auto;
+  max-width: 850px;
   /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
   /*
 * JqSetps
@@ -49,6 +50,10 @@
  *     // import the scss file after the overrides
  *     @import "bower_component/intl-tel-input/src/css/intlTelInput";
  */ }
+  .widget-wrapper .container-fluid {
+    padding: 0 !important; }
+    .widget-wrapper .container-fluid .step-body {
+      padding: 0 15px; }
   .widget-wrapper, .widget-wrapper * {
     box-sizing: border-box; }
   .widget-wrapper html {
@@ -753,7 +758,7 @@
 
 @keyframes jqs-enter {
   0% { } }
-  @media (max-width: 700px) {
+  @media (max-width: 733px) {
     .widget-wrapper .jqs .jqs-content {
       border-top: 1px solid #999; }
     .widget-wrapper .jqs .jqs-steps {
@@ -4340,7 +4345,10 @@
     .widget-wrapper .widget-form-container .widget-form {
       position: relative; }
       .widget-wrapper .widget-form-container .widget-form button {
-        margin-top: 12px; }
+        margin-top: 12px;
+        max-width: 210px;
+        position: relative;
+        font-size: 16px; }
       .widget-wrapper .widget-form-container .widget-form .form-loading {
         margin-top: 26px; }
       .widget-wrapper .widget-form-container .widget-form label {
@@ -4362,8 +4370,9 @@
         border-left: none; }
         .widget-wrapper .widget-form-container .widget-form .step-arrow img {
           background: #04214C;
-          right: 17px;
-          top: 11px; }
+          right: 6px;
+          top: -10px;
+          padding: 5px 7px; }
   .widget-wrapper .widget-strategy-selector .input-group select.input-control {
     height: 37px; }
     .widget-wrapper .widget-strategy-selector .input-group select.input-control option {
@@ -4405,6 +4414,8 @@
         margin: auto; }
   .widget-wrapper .widget-generator {
     margin-bottom: 21px; }
+    .widget-wrapper .widget-generator .step-body {
+      margin-top: 15px; }
     .widget-wrapper .widget-generator .draw-line {
       width: 100%;
       margin-bottom: 40px;
