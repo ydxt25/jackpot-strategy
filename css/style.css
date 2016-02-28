@@ -662,68 +662,57 @@
     width: 100%;
     padding: 0; }
   .widget-wrapper .jqs .jqs-steps li {
-    float: left;
-    text-align: center; }
+    float: left; }
   .widget-wrapper .jqs .jqs-steps li.jq-step-last {
     border-right: none; }
   .widget-wrapper .jqs .jqs-steps li.no-border .jqs-step-btn {
     border-right: none; }
   .widget-wrapper .jqs .jqs-steps li .jqs-step-btn {
     position: relative;
+    height: 42px;
     line-height: 40px;
     background: #eeeeee;
     cursor: pointer;
     padding-left: 13px;
     border: 1px solid #999;
-    color: #999999; }
+    color: #999999;
+    border-left: none;
+    font-weight: bold; }
   .widget-wrapper .jqs .jqs-steps li.jqs-active .jqs-step-btn {
-    background: #eef7fb;
+    background: #fcbf45;
     transition: 0.4s background;
-    border: 1px solid #3a87ad;
-    color: #3a87ad; }
+    color: #04214c; }
   .widget-wrapper .jqs .step-title {
-    padding-left: 17px; }
+    padding-left: 24px;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-right: 3px solid #04214c;
+    padding-right: 7px;
+    display: block;
+    float: left;
+    line-height: 22px;
+    margin-top: 10px;
+    width: 100%; }
   .widget-wrapper .jqs .jqs-steps li.jqs-active .jqs-step-btn .step-indicator {
-    background: #3a87ad; }
+    color: #04214c; }
+  .widget-wrapper .jqs .jqs-steps li.jqs-active .jqs-step-btn .step-title {
+    color: #04214c; }
   .widget-wrapper .jqs .jqs-step-content {
     display: none; }
   .widget-wrapper .jqs .step-indicator {
     display: block;
     position: absolute;
-    color: #fff;
+    color: #000;
     width: 20px;
     height: 20px;
     border-radius: 100%;
     text-align: center;
-    font-size: 14px;
+    font-size: 22px;
     line-height: 21px;
     top: 0;
     bottom: 0;
-    margin: auto 0 auto 15px;
-    background: #666;
+    margin: auto 0 auto 0;
     font-weight: bold; }
-  .widget-wrapper .jqs .jq-steps-arrow {
-    position: absolute;
-    height: 20px;
-    top: 0;
-    right: -16px;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 15px solid #999;
-    z-index: 1; }
-  .widget-wrapper .jqs .jq-steps-arrow::after {
-    content: "";
-    position: absolute;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-left: 15px solid #eee;
-    top: -20px;
-    z-index: 2;
-    left: -16px; }
-  .widget-wrapper .jqs .jqs-steps li.jqs-active .jqs-step-btn .jq-steps-arrow::after {
-    border-left-color: #eef7fb; }
-  .widget-wrapper .jqs .jqs-steps li.jqs-active .jqs-step-btn .jq-steps-arrow {
-    border-left-color: #3a87ad; }
   .widget-wrapper .jqs .jqs-content {
     position: relative;
     clear: both;
