@@ -653,7 +653,9 @@
     box-sizing: border-box; }
   .widget-wrapper .jqs {
     font-family: arial;
-    width: 100%; }
+    width: 100%;
+    float: left;
+    box-shadow: 0 11px 50px 0px rgba(0, 0, 0, 0.4); }
   .widget-wrapper .jqs .jqs-steps {
     display: block;
     float: left;
@@ -662,9 +664,12 @@
     width: 100%;
     padding: 0; }
   .widget-wrapper .jqs .jqs-steps li {
-    float: left; }
+    position: relative;
+    float: left;
+    padding-right: 2px;
+    padding-bottom: 4px; }
   .widget-wrapper .jqs .jqs-steps li.jq-step-last {
-    border-right: none; }
+    padding-right: 0; }
   .widget-wrapper .jqs .jqs-steps li.no-border .jqs-step-btn {
     border-right: none; }
   .widget-wrapper .jqs .jqs-steps li .jqs-step-btn {
@@ -674,9 +679,7 @@
     background: #eeeeee;
     cursor: pointer;
     padding-left: 13px;
-    border: 1px solid #999;
     color: #999999;
-    border-left: none;
     font-weight: bold; }
   .widget-wrapper .jqs .jqs-steps li.jqs-active .jqs-step-btn {
     background: #fcbf45;
@@ -686,13 +689,35 @@
     padding-left: 24px;
     text-transform: uppercase;
     font-size: 13px;
-    border-right: 3px solid #04214c;
     padding-right: 7px;
     display: block;
     float: left;
     line-height: 22px;
     margin-top: 10px;
     width: 100%; }
+  .widget-wrapper .jqs .step-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-left: 3px solid #8792a3;
+    height: 25px;
+    margin: auto;
+    margin-right: 5px;
+    width: 23px;
+    right: 5px; }
+    .widget-wrapper .jqs .step-arrow img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background: #8792a3;
+      padding: 5px;
+      border-radius: 100%; }
+  .widget-wrapper .jqs .jqs-steps li.jqs-active .step-arrow {
+    border-left: 3px solid #04214c; }
+    .widget-wrapper .jqs .jqs-steps li.jqs-active .step-arrow img {
+      background: #04214c; }
   .widget-wrapper .jqs .jqs-steps li.jqs-active .jqs-step-btn .step-indicator {
     color: #04214c; }
   .widget-wrapper .jqs .jqs-steps li.jqs-active .jqs-step-btn .step-title {
@@ -702,7 +727,6 @@
   .widget-wrapper .jqs .step-indicator {
     display: block;
     position: absolute;
-    color: #000;
     width: 20px;
     height: 20px;
     border-radius: 100%;
@@ -720,9 +744,8 @@
     width: 100%;
     min-height: 300px;
     background: #fff;
-    border: 1px solid #999;
     border-top: none;
-    padding: 10px; }
+    padding: 0; }
   .widget-wrapper .jqs .jqs-step-content {
     float: left;
     width: 100%;
@@ -4162,6 +4185,14 @@
     padding-right: 10px !important; }
   .widget-wrapper .hidden {
     display: none !important; }
+  .widget-wrapper h3.step-header {
+    margin: 0;
+    line-height: 38px;
+    background: #04214C;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    font-weight: normal; }
   .widget-wrapper .text-center {
     text-align: center; }
   .widget-wrapper .input-group label.error {
@@ -4177,13 +4208,23 @@
   .widget-wrapper .input-group .intl-tel-input label.error {
     right: 0; }
   .widget-wrapper .btn-custom1 {
+    border: none;
+    font-weight: bold;
     line-height: 32px;
-    background: #1e86bb;
-    color: #fff;
+    color: #04214c;
     font-size: 21px;
-    border: inset 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.3);
-    text-decoration: none; }
+    text-decoration: none;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcda4a+0,fbb743+100 */
+    background: #fcda4a;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #fcda4a 0%, #fbb743 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #fcda4a 0%, #fbb743 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #fcda4a 0%, #fbb743 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcda4a', endColorstr='#fbb743',GradientType=0 );
+    /* IE6-9 */ }
   .widget-wrapper .wide {
     width: 100% !important; }
   .widget-wrapper .input-group {
@@ -4197,18 +4238,18 @@
       padding-left: 10px;
       border: 1px solid #ccc;
       outline: none;
-      transition: 0.3s border;
       display: block;
       height: 45px;
-      background: #fff; }
+      background: #f3f4f4;
+      border-right: 2px solid #e0e1e1; }
       .widget-wrapper .input-group .input-control:focus {
         outline: none;
         border: 1px solid #ccc;
-        border-bottom: 1px solid #1e86bb; }
+        border-right: 2px solid #04214c; }
       .widget-wrapper .input-group .input-control.error:focus {
         outline: none;
         border: 1px solid #ccc;
-        border-bottom: 1px solid #AF0505; }
+        border-right: 2px solid #AF0505; }
   .widget-wrapper .loader,
   .widget-wrapper .loader:before,
   .widget-wrapper .loader:after {
@@ -4294,7 +4335,8 @@
     transform: scale(1); } }
   .widget-wrapper .widget-form-container {
     padding-left: 0;
-    padding-right: 0; }
+    padding-right: 0;
+    margin-bottom: 27px; }
     .widget-wrapper .widget-form-container .widget-form {
       position: relative; }
       .widget-wrapper .widget-form-container .widget-form button {
@@ -4302,9 +4344,9 @@
       .widget-wrapper .widget-form-container .widget-form .form-loading {
         margin-top: 26px; }
       .widget-wrapper .widget-form-container .widget-form label {
-        font-size: 14px;
         line-height: 22px;
-        font-weight: bold; }
+        font-weight: normal;
+        font-size: 14px; }
       .widget-wrapper .widget-form-container .widget-form h3.form-error {
         text-align: center;
         margin: 0;
@@ -4313,6 +4355,15 @@
         font-weight: normal;
         font-size: 18px;
         line-height: 28px; }
+      .widget-wrapper .widget-form-container .widget-form .step-arrow {
+        display: block;
+        height: 49px;
+        margin: 0;
+        border-left: none; }
+        .widget-wrapper .widget-form-container .widget-form .step-arrow img {
+          background: #04214C;
+          right: 17px;
+          top: 11px; }
   .widget-wrapper .widget-strategy-selector .input-group select.input-control {
     height: 37px; }
     .widget-wrapper .widget-strategy-selector .input-group select.input-control option {

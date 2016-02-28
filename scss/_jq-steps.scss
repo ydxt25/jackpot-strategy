@@ -9,6 +9,8 @@
 .jqs {
   font-family: arial;
   width: 100%;
+  float: left;
+  box-shadow: 0 11px 50px 0px rgba(0, 0, 0, 0.4);
 }
 .jqs .jqs-steps {
   display: block;
@@ -20,11 +22,14 @@
 }
 
 .jqs .jqs-steps li {
+  position: relative;
   float: left;
+  padding-right: 2px;
+  padding-bottom: 4px;
 }
 
 .jqs .jqs-steps li.jq-step-last {
-  border-right: none;
+  padding-right: 0;
 }
 
 .jqs .jqs-steps li.no-border .jqs-step-btn{
@@ -38,9 +43,7 @@
   background: #eeeeee;
   cursor: pointer;
   padding-left: 13px;
-  border: 1px solid #999;
   color: #999999;
-  border-left: none;
   font-weight: bold;
 }
 
@@ -54,13 +57,43 @@
   padding-left: 24px;
   text-transform: uppercase;
   font-size: 13px;
-  border-right: 3px solid #04214c;
   padding-right: 7px;
   display: block;
   float: left;
   line-height: 22px;
   margin-top: 10px;
   width: 100%;
+}
+
+.jqs .step-arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-left: 3px solid #8792a3;
+  height: 25px;
+  margin: auto;
+  margin-right: 5px;
+  width: 23px;
+  right: 5px;
+
+  img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #8792a3;
+    padding: 5px;
+    border-radius: 100%;
+  }
+}
+
+.jqs .jqs-steps li.jqs-active .step-arrow {
+  border-left: 3px solid #04214c;
+
+  img {
+    background: #04214c;
+  }
 }
 
 .jqs .jqs-steps li.jqs-active .jqs-step-btn .step-indicator {
@@ -78,7 +111,6 @@
 .jqs .step-indicator {
   display: block;
   position: absolute;
-  color: #000;
   width: 20px;
   height: 20px;
   border-radius: 100%;
@@ -98,9 +130,8 @@
   width: 100%;
   min-height: 300px;
   background: #fff;
-  border: 1px solid #999;
   border-top: none;
-  padding: 10px;
+  padding: 0;
 }
 
 .jqs .jqs-step-content {

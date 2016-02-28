@@ -7,6 +7,16 @@
   display: none !important;
 }
 
+h3.step-header {
+  margin: 0;
+  line-height: 38px;
+  background: #04214C;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  font-weight: normal;
+}
+
 .text-center {
   text-align: center;
 }
@@ -28,13 +38,18 @@
 }
 
 .btn-custom1 {
+  border: none;
+  font-weight: bold;
   line-height: 32px;
-  background: $color1;
-  color: $color1-inverse;
+  color: $color1;
   font-size: 21px;
-  border: inset 2px rgba(0,0,0,0.3);
-  box-shadow: 0 0 10px 0px rgba(0,0,0,0.3);
   text-decoration: none;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcda4a+0,fbb743+100 */
+  background: #fcda4a; /* Old browsers */
+  background: -moz-linear-gradient(top,  #fcda4a 0%, #fbb743 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #fcda4a 0%,#fbb743 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #fcda4a 0%,#fbb743 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcda4a', endColorstr='#fbb743',GradientType=0 ); /* IE6-9 */
 }
 
 .wide {
@@ -54,21 +69,22 @@
     padding-left: 10px;
     border: 1px solid #ccc;
     outline: none;
-    transition: 0.3s border;
     display: block;
     height: 45px;
-    background: #fff;
+    background: #f3f4f4;
+
+    border-right: 2px solid #e0e1e1;
 
     &:focus {
       outline: none;
       border: 1px solid #ccc;
-      border-bottom: 1px solid $color1;
+      border-right: 2px solid $color1;
     }
 
     &.error:focus {
       outline: none;
       border: 1px solid #ccc;
-      border-bottom: 1px solid #AF0505;
+      border-right: 2px solid #AF0505;
     }
   }
 }

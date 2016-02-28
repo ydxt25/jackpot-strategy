@@ -1,6 +1,7 @@
 .widget-form-container {
   padding-left: 0;
   padding-right: 0;
+  margin-bottom: 27px;
 
   .widget-form {
     position: relative;
@@ -14,9 +15,9 @@
     }
 
     label {
-      font-size: 14px;
       line-height: 22px;
-      font-weight: bold;
+      font-weight: normal;
+      font-size: 14px;
     }
 
     h3.form-error {
@@ -27,6 +28,19 @@
       font-weight: normal;
       font-size: 18px;
       line-height: 28px;
+    }
+
+    .step-arrow {
+      display: block;
+      height: 49px;
+      margin: 0;
+      border-left: none;
+
+      img {
+        background: #04214C;
+        right: 17px;
+        top: 11px;
+      }
     }
   }
 
