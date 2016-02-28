@@ -74,6 +74,6 @@ widgetApp.addView('form', {
 
 		this.$el.find('.form-error')
 			.removeClass('hidden')
-			.text(error);
+			.text('Email already exists, please change your email and try again');
 	}
 });

@@ -25,6 +25,18 @@ return __p
 (function() {
 window["JST"] = window["JST"] || {};
 
+window["JST"]["views/games/templates/default.html"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '';
+with (obj) {
+__p += '<div class="widget-game-container container-fluid">\r\n	<h3 class="step-header">STEP 3 - <span>Select Game</span></h3>\r\n	<div class="step-body">\r\n		<div class="owl-carousel owl-theme games-box-container">\r\n			{{ _.each(games, function(game) { }}\r\n			<div class="game-box">\r\n				<img class="clock-image" src="images/clock.png" alt=""/>\r\n				<div class="box-content">\r\n					<div class="time-left game-timer" data-time="{{= game.endDate.getTime() }}"></div>\r\n					<div class="jackpot">{{= game.jackpot }}</div>\r\n					<div class="game-logo">\r\n						<img src="http://cdn.jackpotsstrategy.com/widget/images/{{= game.systemName }}.png" alt=""/>\r\n					</div>\r\n				</div>\r\n				<button type="button" data-game="{{= game.systemName }}" class="select-game-btn btn btn-custom1">Generate</button>\r\n			</div>\r\n			{{ }); }}\r\n		</div>\r\n	</div>\r\n</div>';
+
+}
+return __p
+}})();
+(function() {
+window["JST"] = window["JST"] || {};
+
 window["JST"]["views/form/templates/default.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '';
@@ -42,18 +54,6 @@ obj || (obj = {});
 var __t, __p = '';
 with (obj) {
 __p += '<div class="widget-generator container-fluid text">\r\n	<h3 class="step-header">Step 4 - <span>Generate & Checkout</span></h3>\r\n	<div class="step-body">\r\n		<div class="row">\r\n			<div class="cg-xs-12">\r\n				<div id="draws"></div>\r\n			</div>\r\n			<div class="cg-xs-12 text-center">\r\n				<div class="generating">\r\n					<div class="loading-text text-center"><strong>Please Wait</strong> while our algorithm is generating numbers</div>\r\n					<div class="spinner">\r\n						<div class="bounce1"></div>\r\n						<div class="bounce2"></div>\r\n						<div class="bounce3"></div>\r\n					</div>\r\n				</div>\r\n				<div class="generated hidden">\r\n					<p class="generated-text">\r\n						Your numbers has generated! checkout now with your lottery provider\r\n					</p>\r\n					<a href="" class="btn btn-custom1 checkout-now generate-btn">Checkout</a>\r\n				</div>\r\n				<div class="input-group checkout-loading hidden">\r\n					<div class="cg-xs-12">\r\n						<div class="loading-text text-center"><strong>Please Wait</strong> Numbers is being added to your cart!</div>\r\n						<div class="spinner">\r\n							<div class="bounce1"></div>\r\n							<div class="bounce2"></div>\r\n							<div class="bounce3"></div>\r\n						</div>\r\n					</div>\r\n				</div>\r\n			</div>\r\n		</div>\r\n	</div>\r\n</div>';
-
-}
-return __p
-}})();
-(function() {
-window["JST"] = window["JST"] || {};
-
-window["JST"]["views/games/templates/default.html"] = function(obj) {
-obj || (obj = {});
-var __t, __p = '';
-with (obj) {
-__p += '<div class="widget-game-container container-fluid">\r\n	<h3 class="step-header">STEP 3 - <span>Select Game</span></h3>\r\n	<div class="step-body">\r\n		<div class="owl-carousel owl-theme games-box-container">\r\n			{{ _.each(games, function(game) { }}\r\n			<div class="game-box">\r\n				<img class="clock-image" src="images/clock.png" alt=""/>\r\n				<div class="box-content">\r\n					<div class="time-left game-timer" data-time="{{= game.endDate.getTime() }}"></div>\r\n					<div class="jackpot">{{= game.jackpot }}</div>\r\n					<div class="game-logo">\r\n						<img src="http://cdn.jackpotsstrategy.com/widget/images/{{= game.systemName }}.png" alt=""/>\r\n					</div>\r\n				</div>\r\n				<button type="button" data-game="{{= game.systemName }}" class="select-game-btn btn btn-custom1">Generate</button>\r\n			</div>\r\n			{{ }); }}\r\n		</div>\r\n	</div>\r\n</div>';
 
 }
 return __p
