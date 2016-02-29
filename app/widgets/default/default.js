@@ -15,6 +15,8 @@ widgetApp.addWidget('default', function(options) {
         formView.events.on('form:submit', function(data) {
 
             data.campaign_id = options.campaignId;
+            data.tracking = options.tracking || {};
+
             // make an ajax
             $.ajax({
                 url: widgetApp.baseUrl + '/api/v1/customers',
