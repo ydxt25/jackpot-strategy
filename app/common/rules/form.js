@@ -25,7 +25,8 @@
                },
                phone: {
                    required: true,
-                   minlength: 5,
+                   digits: true,
+                   minlength: 7,
                    maxlength: 30
                }
            },
