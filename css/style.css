@@ -4455,5 +4455,7 @@
       max-width: 300px;
       margin: auto;
       font-size: 27px; }
+      .widget-wrapper .widget-generator .generate-btn.generated-top {
+        margin-bottom: 20px; }
     .widget-wrapper .widget-generator p.generated-text {
       margin-top: 0; }

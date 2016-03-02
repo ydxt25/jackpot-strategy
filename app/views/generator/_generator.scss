@@ -54,6 +54,10 @@
     max-width: 300px;
     margin: auto;
     font-size: 27px;
+
+    &.generated-top {
+      margin-bottom: 20px;
+    }
   }
 
   p.generated-text {

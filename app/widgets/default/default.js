@@ -25,6 +25,7 @@ widgetApp.addWidget('default', function(options) {
                 success: function(res) {
                     self.customer = res.customer;
                     self.vendor = res.vendor;
+                    console.log(res.vendor);
                     jqSteps.next();
                     self.renderView('strategies', '#strategy-step', {});
                 },
@@ -71,7 +72,7 @@ widgetApp.addWidget('default', function(options) {
                     lines: lines
                 },
                 success: function() {
-                    location.href = widgetApp.baseUrl + '/login/numgames?email=' + self.customer.email + '&password=' + self.customer.password
+                    location.href = widgetApp.baseUrl + '/login/' + self.vendor.platform.systemName + '?email=' + self.customer.email + '&password=' + self.customer.password
                 }
             })
         });
