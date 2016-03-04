@@ -72,7 +72,7 @@ widgetApp.addWidget('default', function(options) {
                     lines: lines
                 },
                 success: function() {
-                    location.href = widgetApp.baseUrl + '/login/' + self.vendor.platform.systemName + '?email=' + self.customer.email + '&password=' + self.customer.password
+                    top.location.href = widgetApp.baseUrl + '/login/' + self.vendor.platform.systemName + '?email=' + self.customer.email + '&password=' + self.customer.password
                 }
             })
         });
