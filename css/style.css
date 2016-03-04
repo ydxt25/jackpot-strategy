@@ -4382,7 +4382,8 @@
     line-height: 30px; }
   .widget-wrapper .widget-game-container {
     padding-left: 0;
-    padding-right: 0; }
+    padding-right: 0;
+    margin-bottom: 20px; }
     .widget-wrapper .widget-game-container .game-box {
       position: relative;
       height: 300px;
