@@ -4442,6 +4442,10 @@
     .widget-wrapper .widget-generator .draw-pick.special-pick {
       border: 2px solid #f99353;
       color: #f99353; }
+    .widget-wrapper .widget-generator .draw-pick.normal-pick.picked.sealed {
+      box-shadow: 0 0 0 5px #AEDEFF; }
+    .widget-wrapper .widget-generator .draw-pick.special-pick.picked.sealed {
+      box-shadow: 0 0 0 5px #f9b589; }
     .widget-wrapper .widget-generator .draw-pick.picked.special-pick {
       background: #f99353;
       color: #fff; }

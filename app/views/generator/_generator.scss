@@ -37,6 +37,14 @@
     color: #f99353;
   }
 
+  .draw-pick.normal-pick.picked.sealed {
+    box-shadow: 0 0 0 5px #AEDEFF;
+  }
+
+  .draw-pick.special-pick.picked.sealed {
+    box-shadow: 0 0 0 5px #f9b589;
+  }
+
   .draw-pick.picked.special-pick {
     background: #f99353;
     color: #fff;

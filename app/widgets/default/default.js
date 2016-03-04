@@ -39,7 +39,7 @@ widgetApp.addWidget('default', function(options) {
 
     // Strategy View Logic
     this.onViewRender('strategies', function(strategiesView) {
-        strategiesView.events.on('strategy:select:clicked', function(strategy) {
+        strategiesView.events.on('strategy:select:clicked', function() {
 
             $.ajax({
                 url: widgetApp.baseUrl + '/api/v1/games',
@@ -62,7 +62,7 @@ widgetApp.addWidget('default', function(options) {
 
     // Draws View Logic
     this.onViewRender('generator', function(gamesView) {
-        gamesView.events.on('checkout:clicked', function(game, lines) {
+        gamesView.events.on('checkout:start', function(game, lines) {
             $.ajax({
                 url: widgetApp.baseUrl + '/api/v1/customers/checkout',
                 type: 'POST',
@@ -79,9 +79,6 @@ widgetApp.addWidget('default', function(options) {
     });
 
     //self.renderView('strategies', '#strategy-step', {});
-    //jqSteps.next();
-    //self.renderView('strategies', '#strategy-step', {});
-
     this.renderView('form', '#form-step', options);
 
 });

@@ -23,10 +23,14 @@ widgetApp.addView('generator', {
                         $('#numbers-ready').removeClass('hidden');
 
                         self.$el.find('.generating').addClass('hidden');
-                        self.$el.find('.generated')
-                            .addClass('animated bounceIn')
+
+                        self.$el
+                            .find('.checkout-loading')
                             .removeClass('hidden');
 
+                        setTimeout(function() {
+                            self.events.trigger('checkout:start', self.options.game, generator.getLastPick());
+                        }, 2000)
                     }
                     else {
                         generator.pick();
@@ -44,20 +48,5 @@ widgetApp.addView('generator', {
     },
     onDestroy: function() {
 
-    },
-    events: {
-        'click .checkout-now': 'checkoutClicked'
-    },
-    checkoutClicked: function(e) {
-        this.$el
-            .find('.generated')
-            .addClass('hidden')
-            .end()
-            .find('.checkout-loading')
-            .removeClass('hidden');
-
-        e.preventDefault();
-        this.events.trigger('checkout:clicked', this.options.game, this.generator.getLastPick());
-        console.log(this.generator.getLastPick());
     }
 });
