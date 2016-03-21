@@ -4499,3 +4499,8 @@
         margin-bottom: 20px; }
     .widget-wrapper .widget-generator p.generated-text {
       margin-top: 0; }
+  .widget-wrapper .widget-redirect .loading-text {
+    line-height: 28px;
+    margin-top: 61px; }
+    .widget-wrapper .widget-redirect .loading-text strong {
+      font-size: 23px; }
