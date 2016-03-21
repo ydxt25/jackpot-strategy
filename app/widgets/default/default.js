@@ -35,6 +35,36 @@ widgetApp.addWidget('default', function(options) {
             });
         });
 
+        formView.events.on('show:login', function() {
+            self.renderView('login', '#form-step', options);
+        });
+    });
+
+    this.onViewRender('login', function(loginView) {
+        loginView.events.on('login:form:submit', function(data) {
+            data.campaign_id = options.campaignId;
+            data.tracking = options.tracking || {};
+
+            // make an ajax
+            $.ajax({
+                url: widgetApp.baseUrl + '/api/v1/customers/login',
+                type: 'post',
+                data: data,
+                success: function(res) {
+                    self.customer = res.customer;
+                    self.vendor = res.vendor;
+                    jqSteps.next();
+                    self.renderView('strategies', '#strategy-step', {});
+                },
+                error: function(res) {
+                    loginView.triggerMethod('showError', res.responseJSON.error);
+                }
+            });
+        });
+
+        loginView.events.on('show:form', function() {
+            self.renderView('form', '#form-step', options);
+        });
     });
 
     // Strategy View Logic

@@ -4373,6 +4373,41 @@
           right: 6px;
           top: -10px;
           padding: 5px 7px; }
+  .widget-wrapper .widget-login-container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 27px; }
+    .widget-wrapper .widget-login-container .widget-form {
+      position: relative; }
+      .widget-wrapper .widget-login-container .widget-form button {
+        margin-top: 12px;
+        max-width: 210px;
+        position: relative;
+        font-size: 16px; }
+      .widget-wrapper .widget-login-container .widget-form .form-loading {
+        margin-top: 26px; }
+      .widget-wrapper .widget-login-container .widget-form label {
+        line-height: 22px;
+        font-weight: normal;
+        font-size: 14px; }
+      .widget-wrapper .widget-login-container .widget-form h3.form-error {
+        text-align: center;
+        margin: 0;
+        background: #AF0505;
+        color: #fff;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 28px; }
+      .widget-wrapper .widget-login-container .widget-form .step-arrow {
+        display: block;
+        height: 49px;
+        margin: 0;
+        border-left: none; }
+        .widget-wrapper .widget-login-container .widget-form .step-arrow img {
+          background: #04214C;
+          right: 6px;
+          top: -10px;
+          padding: 5px 7px; }
   .widget-wrapper .widget-strategy-selector .input-group select.input-control {
     height: 37px; }
     .widget-wrapper .widget-strategy-selector .input-group select.input-control option {

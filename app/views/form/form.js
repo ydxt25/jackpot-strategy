@@ -32,7 +32,12 @@ widgetApp.addView('form', {
 	},
 	events: {
 		"submit .widget-form": 'formSubmit',
-		"change select[name=country]": 'countrySelectChanged'
+		"change select[name=country]": 'countrySelectChanged',
+		"click .show-login": "showLogin"
+	},
+	showLogin: function(e) {
+		e.preventDefault();
+		this.events.trigger('show:login')
 	},
 	countrySelectChanged: function(e) {
 		var iso = $(e.currentTarget).val();
