@@ -6,12 +6,12 @@
 		this.$el.addClass('widget-wrapper');
 
 		this.$el.html(JST['widgets/' + widget + '/' + widget + '.tpl.html']);
+		this.$el.css('max-width', (options.maxWidth || 850) + 'px');
 		widgetApp._widgets[widget].apply(this, [options]);
 	};
 
 	Widget.prototype.renderView = function(view, selector, options) {
 		$el = this.$el.find(selector);
-
 		var viewObj = widgetApp.createView(view, $el, options);
 		viewObj.render();
 

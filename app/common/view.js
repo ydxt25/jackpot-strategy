@@ -1,10 +1,9 @@
 (function() {
 	var View = widgetApp.View = function(viewCallbacks, el, options) {
 		var self = this;
-
 		this.$el = $(el);
 		this.options = options;
-		this.template = 'views/' + options.viewName + '/templates/' + ( viewCallbacks.template || 'default' ) + '.html';
+		this.template = 'views/' + options.viewName + '/templates/' + ( viewCallbacks.template || options.template || 'default' ) + '.html';
 		this.viewCallbacks = viewCallbacks;
 		this.events = new widgetApp.Events();
 	};
@@ -12,7 +11,6 @@
 	View.prototype.render = function() {
 		var viewOptions = this.viewCallbacks.templateHelpers ? this.viewCallbacks.templateHelpers() : {};
 
-		console.log(viewOptions);
 		this.$el.html(
 			_.template(JST[this.template]())(viewOptions)
 		);

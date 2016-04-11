@@ -3,6 +3,10 @@
   padding-right: 0;
   margin-bottom: 27px;
 
+  &.form-1column {
+    label { display: none; }
+  }
+
   .widget-form {
     position: relative;
 

@@ -5,7 +5,7 @@ window["JST"]["widgets/default/default.tpl.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '';
 with (obj) {
-__p += '<div class="jqs" id="jqs-example">\n    <ul class="jqs-steps">\n        <li>Registration</li>\n        <li>Set Strategy</li>\n        <li>Set Game</li>\n        <li>Generate</li>\n    </ul>\n    <div class="jqs-content">\n        <div class="jqs-step-content" id="form-step"></div>\n        <div class="jqs-step-content" id="strategy-step"></div>\n        <div class="jqs-step-content" id="games-step"></div>\n        <div class="jqs-step-content" id="generator-step"></div>\n    </div>\n</div>';
+__p += '<div class="jqs" id="jqs-example">\r\n    <ul class="jqs-steps">\r\n        <li>Registration</li>\r\n        <li>Set Strategy</li>\r\n        <li>Set Game</li>\r\n        <li>Generate</li>\r\n    </ul>\r\n    <div class="jqs-content">\r\n        <div class="jqs-step-content" id="form-step"></div>\r\n        <div class="jqs-step-content" id="strategy-step"></div>\r\n        <div class="jqs-step-content" id="games-step"></div>\r\n        <div class="jqs-step-content" id="generator-step"></div>\r\n    </div>\r\n</div>';
 
 }
 return __p
@@ -17,7 +17,7 @@ window["JST"]["widgets/form/form.tpl.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '';
 with (obj) {
-__p += '<div class="jqs" id="jqs-example">\n    <ul class="jqs-steps">\n        <li>Registration</li>\n        <li>Start Play</li>\n    </ul>\n    <div class="jqs-content">\n        <div class="jqs-step-content" id="form-step"></div>\n        <div class="jqs-step-content" id="redirect-step"></div>\n    </div>\n</div>\n';
+__p += '<div class="jqs" id="jqs-example">\r\n    <ul class="jqs-steps hidden">\r\n        <li>Registration</li>\r\n        <li>Start Play</li>\r\n    </ul>\r\n    <div class="jqs-content">\r\n        <div class="jqs-step-content" id="form-step"></div>\r\n        <div class="jqs-step-content" id="redirect-step"></div>\r\n    </div>\r\n</div>\r\n';
 
 }
 return __p
@@ -29,7 +29,19 @@ window["JST"]["widgets/game/game.tpl.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '';
 with (obj) {
-__p += '<div class="jqs" id="jqs-example">\n    <ul class="jqs-steps">\n        <li>Registration</li>\n        <li>Set Strategy</li>\n        <li>Generate</li>\n    </ul>\n    <div class="jqs-content">\n        <div class="jqs-step-content" id="form-step"></div>\n        <div class="jqs-step-content" id="strategy-step"></div>\n        <div class="jqs-step-content" id="generator-step"></div>\n    </div>\n</div>';
+__p += '<div class="jqs" id="jqs-example">\r\n    <ul class="jqs-steps">\r\n        <li>Registration</li>\r\n        <li>Set Strategy</li>\r\n        <li>Generate</li>\r\n    </ul>\r\n    <div class="jqs-content">\r\n        <div class="jqs-step-content" id="form-step"></div>\r\n        <div class="jqs-step-content" id="strategy-step"></div>\r\n        <div class="jqs-step-content" id="generator-step"></div>\r\n    </div>\r\n</div>';
+
+}
+return __p
+}})();
+(function() {
+window["JST"] = window["JST"] || {};
+
+window["JST"]["views/form/templates/1column.html"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '';
+with (obj) {
+__p += '<div class="widget-form-container container-fluid form-1column">\r\n	<h3 class="step-header"><strong>STEP 1</strong> - Create an Account</h3>\r\n	<form action="" class="widget-form">\r\n		<div class="input-group">\r\n			<div class="cg-xs-12">\r\n				<h3 class="form-error hidden"></h3>\r\n			</div>\r\n		</div>\r\n		<div class="input-group">\r\n			<div class="cg-sm-12 cg-xs-12">\r\n				<label for="first_name">First Name</label>\r\n				<input type="text" name="first_name" class="input-control" placeholder="First Name" id="first_name"/>\r\n			</div>\r\n		</div>\r\n		<div class="input-group">\r\n			<div class="cg-sm-12 cg-xs-12">\r\n				<label for="first_name">Last Name</label>\r\n				<input type="text" name="last_name" class="input-control" placeholder="Last Name"/>\r\n			</div>\r\n		</div>\r\n		<div class="input-group">\r\n			<div class="cg-sm-12 cg-xs-12">\r\n				<label for="first_name">Email</label>\r\n				<input type="text" name="email" class="input-control" placeholder="Email"/>\r\n			</div>\r\n		</div>\r\n		<div class="input-group">\r\n			<div class="cg-sm-12 cg-xs-12">\r\n				<label for="first_name">Password</label>\r\n				<input type="password" name="password" class="input-control" placeholder="Password"/>\r\n			</div>\r\n		</div>\r\n		<div class="input-group">\r\n			<div class="cg-sm-12 cg-xs-12">\r\n				<label for="country">Country</label>\r\n				<select name="country" id="country" class="input-control">\r\n\r\n				</select>\r\n			</div>\r\n		</div>\r\n		<div class="input-group">\r\n			<div class="cg-sm-12 cg-xs-12">\r\n				<label for="first_name">Phone</label>\r\n				<input type="text" name="phone" class="input-control"/>\r\n			</div>\r\n		</div>\r\n		<div class="input-group form-buttons">\r\n			<div class="cg-sm-12 col-xs-12 text-center">\r\n				<button type="submit" class="btn-custom1 wide">\r\n					Sign up Now\r\n					<span class="step-arrow">\r\n						<img src="http://cdn.jackpotsstrategy.com/widget/images/arrow-big.png" alt=""/>\r\n					</span>\r\n				</button>\r\n			</div>\r\n		</div>\r\n		<div class="input-group form-loading hidden">\r\n			<div class="cg-xs-12">\r\n				<div class="loading-text text-center"><strong>Please Wait</strong> our system is picking the best lottery provider for you</div>\r\n				<div class="spinner">\r\n					<div class="bounce1"></div>\r\n					<div class="bounce2"></div>\r\n					<div class="bounce3"></div>\r\n				</div>\r\n			</div>\r\n		</div>\r\n	</form>\r\n</div>';
 
 }
 return __p
@@ -78,6 +90,18 @@ obj || (obj = {});
 var __t, __p = '';
 with (obj) {
 __p += '<div class="widget-login-container container-fluid">\r\n	<h3 class="step-header"><strong>STEP 1</strong> - Sign In</h3>\r\n	<form action="" class="widget-form">\r\n		<div class="input-group">\r\n			<div class="cg-xs-12">\r\n				<h3 class="form-error hidden"></h3>\r\n			</div>\r\n		</div>\r\n		<div class="input-group">\r\n			<div class="cg-xs-12 cg-sm-offset-3 cg-sm-6">\r\n				<label for="email" class="sr-only">Email</label>\r\n				<input type="text" id="email" name="email" class="input-control" placeholder="Email"/>\r\n			</div>\r\n			<div class="cg-xs-12 cg-sm-offset-3 cg-sm-6">\r\n				<label for="password" class="sr-only">Password</label>\r\n				<input type="password" name="password" id="password" class="input-control" placeholder="Password"/>\r\n			</div>\r\n		</div>\r\n		<div class="input-group form-buttons">\r\n			<div class="cg-sm-6 cg-sm-offset-3 col-xs-12 text-center">\r\n				<button type="submit" class="btn-custom1 wide">\r\n					Sign In\r\n					<span class="step-arrow">\r\n						<img src="http://cdn.jackpotsstrategy.com/widget/images/arrow-big.png" alt=""/>\r\n					</span>\r\n				</button>\r\n				<hr/>\r\n				<div class="register-text text-center">New Customer? <a class="show-form" href="">Register Here</a></div>\r\n			</div>\r\n		</div>\r\n		<div class="input-group form-loading hidden">\r\n			<div class="cg-xs-12">\r\n				<div class="loading-text text-center"><strong>Please Wait</strong> your being logged in..</div>\r\n				<div class="spinner">\r\n					<div class="bounce1"></div>\r\n					<div class="bounce2"></div>\r\n					<div class="bounce3"></div>\r\n				</div>\r\n			</div>\r\n		</div>\r\n	</form>\r\n</div>';
+
+}
+return __p
+}})();
+(function() {
+window["JST"] = window["JST"] || {};
+
+window["JST"]["views/redirect/templates/1column.html"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '';
+with (obj) {
+__p += '<div class="widget-redirect container-fluid text">\r\n	<div class="checkout-loading animated bounceIn">\r\n		<div class="loading-text text-center"><strong>Please Wait</strong>\r\n			<br/>\r\n			Your now being redirected to your lotto provider</div>\r\n		<div class="spinner">\r\n			<div class="bounce1"></div>\r\n			<div class="bounce2"></div>\r\n			<div class="bounce3"></div>\r\n		</div>\r\n	</div>\r\n</div>\r\n';
 
 }
 return __p

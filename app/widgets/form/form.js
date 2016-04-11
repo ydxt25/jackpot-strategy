@@ -12,6 +12,8 @@ widgetApp.addWidget('form', function(options) {
      * Form View Logic
      */
     this.onViewRender('form', function(formView) {
+        formView.$el.find('.step-header').hide();
+
         formView.events.on('form:submit', function(data) {
 
             data.campaign_id = options.campaignId;
@@ -26,7 +28,7 @@ widgetApp.addWidget('form', function(options) {
                     self.customer = res.customer;
                     self.vendor = res.vendor;
                     jqSteps.next();
-                    self.renderView('redirect', '#redirect-step', {});
+                    self.renderView('redirect', '#redirect-step', options);
                 },
                 error: function(res) {
                     formView.triggerMethod('showError', res.responseJSON.error);
