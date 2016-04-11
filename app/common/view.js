@@ -9,7 +9,11 @@
 	};
 
 	View.prototype.render = function() {
+		var self = this;
 		var viewOptions = this.viewCallbacks.templateHelpers ? this.viewCallbacks.templateHelpers() : {};
+		viewOptions.trans = function(key) {
+			return self.translate(key);
+		};
 
 		this.$el.html(
 			_.template(JST[this.template]())(viewOptions)
@@ -17,6 +21,10 @@
 
 		this.viewCallbacks.onShow && this.viewCallbacks.onShow.apply(this, [this.options]);
 		this._addEvents();
+	};
+
+	View.prototype.translate = function(key) {
+		return widgetApp.translate(this.options.language || 'en', key)
 	};
 
 	View.prototype._addEvents = function() {

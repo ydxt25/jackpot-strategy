@@ -12,8 +12,6 @@ widgetApp.addWidget('form', function(options) {
      * Form View Logic
      */
     this.onViewRender('form', function(formView) {
-        formView.$el.find('.step-header').hide();
-
         formView.events.on('form:submit', function(data) {
 
             data.campaign_id = options.campaignId;

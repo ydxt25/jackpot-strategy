@@ -8,6 +8,7 @@ var replace = require('gulp-replace');
 gulp.task('inject-app', [ 'wiredep' ], function () {
     var sources = gulp.src([
         'app/app.js',
+        'app/translations/translations.js',
         'app/tmp/**/*.js',
         'app/common/*.js',
         'app/common/**/*.js',

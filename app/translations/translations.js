@@ -1,0 +1,1 @@
+window.widgetApp.translations={"EN":{"First Name":"First Name","Last Name":"Last Name","":""}};

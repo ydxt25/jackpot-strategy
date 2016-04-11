@@ -32,6 +32,7 @@ gulp.task('minify-app', function() {
         'vendor/jquery.countdown/dist/jquery.countdown.js',
         'vendor/jq-steps/jQSteps.js',
         'app/app.js',
+        'app/translations/translations.js',
         'app/tmp/**/*.js',
         'app/common/*.js',
         'app/common/**/*.js',

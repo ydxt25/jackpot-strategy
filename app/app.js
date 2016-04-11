@@ -28,6 +28,13 @@
 		this._widgets[name] = callback;
 	};
 
+	WidgetApp.prototype.translate = function(lang, key) {
+		lang = lang.toUpperCase();
+		if ( ! widgetApp.translations[lang]) return key;
+
+		return widgetApp.translations[lang][key] || key;
+	};
+
 	window.widgetApp = new WidgetApp();
 
 	$.fn.TMLotto = function(template, options) {

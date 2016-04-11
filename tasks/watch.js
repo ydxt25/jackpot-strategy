@@ -26,4 +26,9 @@ gulp.task('watch', function () {
     watch('app/**/*.html', { }, batch(function (events, done) {
         gulp.start('minify-html', done);
     }));
+
+    // Add/Remove script tags
+    watch('app/**/*.json', { }, batch(function (events, done) {
+        gulp.start('json-to-js', done);
+    }));
 });
