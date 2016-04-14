@@ -19,19 +19,19 @@
 		</div>
 		<div class="input-group">
 			<div class="cg-sm-12 cg-xs-12">
-				<label for="first_name">Email</label>
-				<input type="text" name="email" class="input-control" placeholder="Email"/>
+				<label for="first_name">{{= trans('Email') }}</label>
+				<input type="text" name="email" class="input-control" placeholder="{{= trans('Email') }}"/>
 			</div>
 		</div>
 		<div class="input-group">
 			<div class="cg-sm-12 cg-xs-12">
-				<label for="first_name">Password</label>
-				<input type="password" name="password" class="input-control" placeholder="Password"/>
+				<label for="first_name">{{= trans('Password') }}</label>
+				<input type="password" name="password" class="input-control" placeholder="{{= trans('Password') }}"/>
 			</div>
 		</div>
 		<div class="input-group">
 			<div class="cg-sm-12 cg-xs-12">
-				<label for="country">Country</label>
+				<label for="country">{{= trans('Country') }}</label>
 				<select name="country" id="country" class="input-control">
 
 				</select>
@@ -39,14 +39,14 @@
 		</div>
 		<div class="input-group">
 			<div class="cg-sm-12 cg-xs-12">
-				<label for="first_name">Phone</label>
-				<input type="text" name="phone" class="input-control"/>
+				<label for="first_name">{{= trans('Phone') }}</label>
+				<input type="text" name="phone" class="input-control" placeholder="{{= trans('Phone') }}"/>
 			</div>
 		</div>
 		<div class="input-group form-buttons">
 			<div class="cg-sm-12 col-xs-12 text-center">
 				<button type="submit" class="btn-custom1 wide">
-					Sign up Now
+					{{= trans('Sign up Now') }}
 					<span class="step-arrow">
 						<img src="http://cdn.jackpotsstrategy.com/widget/images/arrow-big.png" alt=""/>
 					</span>
@@ -55,7 +55,7 @@
 		</div>
 		<div class="input-group form-loading hidden">
 			<div class="cg-xs-12">
-				<div class="loading-text text-center"><strong>Please Wait</strong> our system is picking the best lottery provider for you</div>
+				<div class="loading-text text-center"><strong>{{= trans('Please Wait') }}</strong> {{= trans('Please wait our system is picking the best lottery provider for you') }}</div>
 				<div class="spinner">
 					<div class="bounce1"></div>
 					<div class="bounce2"></div>

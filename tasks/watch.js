@@ -14,7 +14,6 @@ gulp.task('watch', function () {
     watch(['vendor/**/*.js', 'vendor/**/*.css', 'vendor/**/*.scss'], { events: [ 'add', 'unlink' ] }, batch(function (events, done) {
         gulp.start('wiredep-js', done);
         gulp.start('wiredep-sass', done);
-
     }));
 
     // Add/Remove script tags

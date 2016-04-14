@@ -1,5 +1,5 @@
 <div class="widget-game-container container-fluid">
-	<h3 class="step-header">STEP 3 - <span>Select Game</span></h3>
+	<h3 class="step-header">{{= trans('STEP 3') }} - <span>{{= trans('Select Game') }}</span></h3>
 	<div class="step-body">
 		<div class="owl-carousel owl-theme games-box-container">
 			{{ _.each(games, function(game) { }}
@@ -12,7 +12,7 @@
 						<img src="http://cdn.jackpotsstrategy.com/widget/images/{{= game.systemName }}.png" alt=""/>
 					</div>
 				</div>
-				<button type="button" data-game="{{= game.systemName }}" class="select-game-btn btn btn-custom1">Generate</button>
+				<button type="button" data-game="{{= game.systemName }}" class="select-game-btn btn btn-custom1">{{= trans('Generate') }}</button>
 			</div>
 			{{ }); }}
 		</div>

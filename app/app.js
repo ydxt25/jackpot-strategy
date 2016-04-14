@@ -32,7 +32,7 @@
 		lang = lang.toUpperCase();
 		if ( ! widgetApp.translations[lang]) return key;
 
-		return widgetApp.translations[lang][key] || key;
+		return widgetApp.translations[lang][key];
 	};
 
 	window.widgetApp = new WidgetApp();

@@ -3,7 +3,7 @@
  */
 widgetApp.addView('form', {
 	onShow: function() {
-		widgetApp.validator.validateRule('registration', this.$el.find('form'));
+		widgetApp.validator.validateRule('registration', this.options.language || 'en', this.$el.find('form'));
 
 		var $phone = this.$el.find('input[name=phone]').eq(0);
 		$phone.intlTelInput({

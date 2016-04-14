@@ -5,9 +5,19 @@
 		this._viewCallbacks = {};
 		this.$el.addClass('widget-wrapper');
 
-		this.$el.html(JST['widgets/' + widget + '/' + widget + '.tpl.html']);
+		var self = this;
+		var tpl = _.template(JST['widgets/' + widget + '/' + widget + '.tpl.html']());
+		options.trans = function(key) {
+			return self.translate(key);
+		};
+
+		this.$el.html(tpl(options));
 		this.$el.css('max-width', (options.maxWidth || 850) + 'px');
 		widgetApp._widgets[widget].apply(this, [options]);
+	};
+
+	Widget.prototype.translate = function(key) {
+		return widgetApp.translate(this.options.language || 'en', key)
 	};
 
 	Widget.prototype.renderView = function(view, selector, options) {

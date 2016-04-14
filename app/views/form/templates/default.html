@@ -1,5 +1,5 @@
 <div class="widget-form-container container-fluid">
-	<h3 class="step-header"><strong>STEP 1</strong> - Create an Account</h3>
+	<h3 class="step-header"><strong>{{= trans('STEP 1') }}</strong> - {{= trans('Create an Account') }}</h3>
 	<form action="" class="widget-form">
 		<div class="input-group">
 			<div class="cg-xs-12">
@@ -8,51 +8,51 @@
 		</div>
 		<div class="input-group">
 			<div class="cg-sm-6 cg-xs-12">
-				<label for="first_name">First Name</label>
-				<input type="text" name="first_name" class="input-control" placeholder="First Name" id="first_name"/>
+				<label for="first_name">{{= trans('First Name') }}</label>
+				<input type="text" name="first_name" class="input-control" placeholder="{{= trans('First Name') }}" id="first_name"/>
 			</div>
 			<div class="cg-sm-6 cg-xs-12">
-				<label for="first_name">Last Name</label>
-				<input type="text" name="last_name" class="input-control" placeholder="Last Name"/>
-			</div>
-		</div>
-		<div class="input-group">
-			<div class="cg-sm-6 cg-xs-12">
-				<label for="first_name">Email</label>
-				<input type="text" name="email" class="input-control" placeholder="Email"/>
-			</div>
-			<div class="cg-sm-6 cg-xs-12">
-				<label for="first_name">Password</label>
-				<input type="password" name="password" class="input-control" placeholder="Password"/>
+				<label for="first_name">{{= trans('Last Name') }}</label>
+				<input type="text" name="last_name" class="input-control" placeholder="{{= trans('Last Name') }}"/>
 			</div>
 		</div>
 		<div class="input-group">
 			<div class="cg-sm-6 cg-xs-12">
-				<label for="country">Country</label>
+				<label for="first_name">{{= trans('Email') }}</label>
+				<input type="text" name="email" class="input-control" placeholder="{{= trans('Email') }}"/>
+			</div>
+			<div class="cg-sm-6 cg-xs-12">
+				<label for="first_name">{{= trans('Password') }}</label>
+				<input type="password" name="password" class="input-control" placeholder="{{= trans('Password') }}"/>
+			</div>
+		</div>
+		<div class="input-group">
+			<div class="cg-sm-6 cg-xs-12">
+				<label for="country">{{= trans('Country') }}</label>
 				<select name="country" id="country" class="input-control">
 
 				</select>
 			</div>
 			<div class="cg-sm-6 cg-xs-12">
-				<label for="first_name">Phone</label>
-				<input type="text" name="phone" class="input-control"/>
+				<label for="first_name">{{= trans('Phone') }}</label>
+				<input type="text" name="phone" class="input-control" placeholder="{{= trans('Phone') }}"/>
 			</div>
 		</div>
 		<div class="input-group form-buttons">
 			<div class="cg-sm-6 cg-sm-offset-3 col-xs-12 text-center">
 				<button type="submit" class="btn-custom1 wide">
-					Sign up Now
+					{{= trans('Sign up Now') }}
 					<span class="step-arrow">
 						<img src="http://cdn.jackpotsstrategy.com/widget/images/arrow-big.png" alt=""/>
 					</span>
 				</button>
 				<hr/>
-				<div class="login-text text-center">Already registered? <a href="" class="show-login">Login Here</a></div>
+				<div class="login-text text-center">{{= trans('Already registered?') }} <a href="" class="show-login">{{= trans('Login Here') }}</a></div>
 			</div>
 		</div>
 		<div class="input-group form-loading hidden">
 			<div class="cg-xs-12">
-				<div class="loading-text text-center"><strong>Please Wait</strong> our system is picking the best lottery provider for you</div>
+				<div class="loading-text text-center"><strong>{{= trans('Please Wait') }}</strong>{{= trans('our system is picking the best lottery provider for you') }}</div>
 				<div class="spinner">
 					<div class="bounce1"></div>
 					<div class="bounce2"></div>
