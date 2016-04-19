@@ -39,7 +39,7 @@ widgetApp.addWidget('form', function(options) {
     // Draws View Logic
     this.onViewRender('redirect', function() {
         setTimeout(function() {
-            top.location.href = widgetApp.baseUrl + '/login/' + self.vendor.platform.systemName + '?email=' + self.customer.email + '&password=' + self.customer.password
+            top.location.href = widgetApp.baseUrl + '/login/' + self.vendor.platform.system_name + '?email=' + self.customer.email + '&password=' + self.customer.password
         }, 2000);
     });
 

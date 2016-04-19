@@ -25,7 +25,6 @@ widgetApp.addWidget('default', function(options) {
                 success: function(res) {
                     self.customer = res.customer;
                     self.vendor = res.vendor;
-                    console.log(res.vendor);
                     jqSteps.next();
                     self.renderView('strategies', '#strategy-step', {});
                 },
@@ -73,6 +72,9 @@ widgetApp.addWidget('default', function(options) {
 
             $.ajax({
                 url: widgetApp.baseUrl + '/api/v1/games',
+                data: {
+                    vendor: self.vendor.id
+                },
                 success: function(games) {
                     jqSteps.next();
                     self.renderView('games', '#games-step', { games: games });
@@ -102,7 +104,7 @@ widgetApp.addWidget('default', function(options) {
                     lines: lines
                 },
                 success: function() {
-                    top.location.href = widgetApp.baseUrl + '/login/' + self.vendor.platform.systemName + '?email=' + self.customer.email + '&password=' + self.customer.password
+                    top.location.href = widgetApp.baseUrl + '/login/' + self.vendor.platform.system_name + '?email=' + self.customer.email + '&password=' + self.customer.password
                 }
             })
         });

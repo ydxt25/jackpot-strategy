@@ -4445,6 +4445,7 @@
         position: absolute;
         width: 100%;
         bottom: 0;
+        left: 0;
         text-align: center;
         line-height: 39px; }
       .widget-wrapper .widget-game-container .game-box .game-logo img {

@@ -30,6 +30,7 @@
     "del": "^2.2.0",
     "gulp-angular-templates": "0.0.2",
     "gulp-duration": "0.0.0",
+    "gulp-jsoncombine": "^1.0.3",
     "gulp-template-compile": "^1.1.0",
     "require-dir": "^0.3.0",
     "wiredep": "^3.0.0"
