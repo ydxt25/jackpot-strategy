@@ -13,11 +13,11 @@ return __p
 (function() {
 window["JST"] = window["JST"] || {};
 
-window["JST"]["widgets/form/form.tpl.html"] = function(obj) {
+window["JST"]["widgets/game/game.tpl.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '';
 with (obj) {
-__p += '<div class="jqs" id="jqs-example">\r\n    <ul class="jqs-steps hidden">\r\n        <li>{{= trans(\'Registration\') }}</li>\r\n        <li>{{= trans(\'Start Play\') }}</li>\r\n    </ul>\r\n    <div class="jqs-content">\r\n        <div class="jqs-step-content" id="form-step"></div>\r\n        <div class="jqs-step-content" id="redirect-step"></div>\r\n    </div>\r\n</div>\r\n';
+__p += '<div class="jqs" id="jqs-example">\r\n    <ul class="jqs-steps">\r\n        <li>Registration</li>\r\n        <li>Set Strategy</li>\r\n        <li>Generate</li>\r\n    </ul>\r\n    <div class="jqs-content">\r\n        <div class="jqs-step-content" id="form-step"></div>\r\n        <div class="jqs-step-content" id="strategy-step"></div>\r\n        <div class="jqs-step-content" id="generator-step"></div>\r\n    </div>\r\n</div>';
 
 }
 return __p
@@ -25,11 +25,11 @@ return __p
 (function() {
 window["JST"] = window["JST"] || {};
 
-window["JST"]["widgets/game/game.tpl.html"] = function(obj) {
+window["JST"]["widgets/form/form.tpl.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '';
 with (obj) {
-__p += '<div class="jqs" id="jqs-example">\r\n    <ul class="jqs-steps">\r\n        <li>Registration</li>\r\n        <li>Set Strategy</li>\r\n        <li>Generate</li>\r\n    </ul>\r\n    <div class="jqs-content">\r\n        <div class="jqs-step-content" id="form-step"></div>\r\n        <div class="jqs-step-content" id="strategy-step"></div>\r\n        <div class="jqs-step-content" id="generator-step"></div>\r\n    </div>\r\n</div>';
+__p += '<div class="jqs" id="jqs-example">\r\n    <ul class="jqs-steps hidden">\r\n        <li>{{= trans(\'Registration\') }}</li>\r\n        <li>{{= trans(\'Start Play\') }}</li>\r\n    </ul>\r\n    <div class="jqs-content">\r\n        <div class="jqs-step-content" id="form-step"></div>\r\n        <div class="jqs-step-content" id="redirect-step"></div>\r\n    </div>\r\n</div>\r\n';
 
 }
 return __p
