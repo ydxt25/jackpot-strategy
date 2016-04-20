@@ -13,11 +13,11 @@ return __p
 (function() {
 window["JST"] = window["JST"] || {};
 
-window["JST"]["widgets/game/game.tpl.html"] = function(obj) {
+window["JST"]["widgets/form/form.tpl.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '';
 with (obj) {
-__p += '<div class="jqs" id="jqs-example">\r\n    <ul class="jqs-steps">\r\n        <li>Registration</li>\r\n        <li>Set Strategy</li>\r\n        <li>Generate</li>\r\n    </ul>\r\n    <div class="jqs-content">\r\n        <div class="jqs-step-content" id="form-step"></div>\r\n        <div class="jqs-step-content" id="strategy-step"></div>\r\n        <div class="jqs-step-content" id="generator-step"></div>\r\n    </div>\r\n</div>';
+__p += '<div class="jqs" id="jqs-example">\r\n    <ul class="jqs-steps hidden">\r\n        <li>{{= trans(\'Registration\') }}</li>\r\n        <li>{{= trans(\'Start Play\') }}</li>\r\n    </ul>\r\n    <div class="jqs-content">\r\n        <div class="jqs-step-content" id="form-step"></div>\r\n        <div class="jqs-step-content" id="redirect-step"></div>\r\n    </div>\r\n</div>\r\n';
 
 }
 return __p
@@ -25,11 +25,11 @@ return __p
 (function() {
 window["JST"] = window["JST"] || {};
 
-window["JST"]["widgets/form/form.tpl.html"] = function(obj) {
+window["JST"]["widgets/game/game.tpl.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '';
 with (obj) {
-__p += '<div class="jqs" id="jqs-example">\r\n    <ul class="jqs-steps hidden">\r\n        <li>{{= trans(\'Registration\') }}</li>\r\n        <li>{{= trans(\'Start Play\') }}</li>\r\n    </ul>\r\n    <div class="jqs-content">\r\n        <div class="jqs-step-content" id="form-step"></div>\r\n        <div class="jqs-step-content" id="redirect-step"></div>\r\n    </div>\r\n</div>\r\n';
+__p += '<div class="jqs" id="jqs-example">\r\n    <ul class="jqs-steps">\r\n        <li>Registration</li>\r\n        <li>Set Strategy</li>\r\n        <li>Generate</li>\r\n    </ul>\r\n    <div class="jqs-content">\r\n        <div class="jqs-step-content" id="form-step"></div>\r\n        <div class="jqs-step-content" id="strategy-step"></div>\r\n        <div class="jqs-step-content" id="generator-step"></div>\r\n    </div>\r\n</div>';
 
 }
 return __p
@@ -73,11 +73,11 @@ return __p
 (function() {
 window["JST"] = window["JST"] || {};
 
-window["JST"]["views/generator/templates/default.html"] = function(obj) {
+window["JST"]["views/login/templates/default.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '';
 with (obj) {
-__p += '<div class="widget-generator container-fluid text">\r\n	<h3 class="step-header">{{= trans(\'STEP 4\') }} - <span>{{= trans(\'Generate & Checkout\') }}</span></h3>\r\n	<div class="step-body">\r\n		<div class="row">\r\n			<div class="cg-xs-12">\r\n				<div id="draws"></div>\r\n			</div>\r\n			<div class="cg-xs-12 text-center">\r\n				<div class="generating">\r\n					<div class="loading-text text-center"><strong>{{= trans(\'Please Wait\') }}</strong> {{= trans(\'While our algorithm is generating numbers\') }}</div>\r\n					<div class="spinner">\r\n						<div class="bounce1"></div>\r\n						<div class="bounce2"></div>\r\n						<div class="bounce3"></div>\r\n					</div>\r\n				</div>\r\n				<div class="checkout-loading hidden animated bounceIn">\r\n					<div class="loading-text text-center"><strong>{{= trans(\'Please Wait\') }}</strong> {{= trans(\'Numbers is being added to your cart\') }}</div>\r\n					<div class="spinner">\r\n						<div class="bounce1"></div>\r\n						<div class="bounce2"></div>\r\n						<div class="bounce3"></div>\r\n					</div>\r\n				</div>\r\n			</div>\r\n		</div>\r\n	</div>\r\n</div>';
+__p += '<div class="widget-login-container container-fluid">\r\n	<h3 class="step-header"><strong>{{= trans(\'STEP 1\') }}</strong> - {{= trans(\'Sign In\') }}</h3>\r\n	<form action="" class="widget-form">\r\n		<div class="input-group">\r\n			<div class="cg-xs-12">\r\n				<h3 class="form-error hidden"></h3>\r\n			</div>\r\n</div>\r\n		<div class="input-group">\r\n			<div class="cg-xs-12 cg-sm-offset-3 cg-sm-6">\r\n				<label for="email" class="sr-only">{{= trans(\'Email\') }}</label>\r\n				<input type="text" id="email" name="email" class="input-control" placeholder="{{= trans(\'Email\') }}"/>\r\n			</div>\r\n			<div class="cg-xs-12 cg-sm-offset-3 cg-sm-6">\r\n				<label for="password" class="sr-only">{{= trans(\'Password\') }}</label>\r\n				<input type="password" name="password" id="password" class="input-control" placeholder="{{= trans(\'Password\') }}"/>\r\n			</div>\r\n		</div>\r\n		<div class="input-group form-buttons">\r\n			<div class="cg-sm-6 cg-sm-offset-3 col-xs-12 text-center">\r\n				<button type="submit" class="btn-custom1 wide">\r\n					{{= trans(\'Sign In\') }}\r\n					<span class="step-arrow">\r\n						<img src="http://cdn.jackpotsstrategy.com/widget/images/arrow-big.png" alt=""/>\r\n					</span>\r\n				</button>\r\n				<hr/>\r\n				<div class="register-text text-center">{{= trans(\'New Customer?\') }} <a class="show-form" href="">{{= trans(\'Register Here\') }}</a></div>\r\n			</div>\r\n		</div>\r\n		<div class="input-group form-loading hidden">\r\n			<div class="cg-xs-12">\r\n				<div class="loading-text text-center"><strong>{{= trans(\'Please Wait\') }}</strong> {{= trans(\'your being logged in..\') }}</div>\r\n				<div class="spinner">\r\n					<div class="bounce1"></div>\r\n					<div class="bounce2"></div>\r\n					<div class="bounce3"></div>\r\n				</div>\r\n			</div>\r\n		</div>\r\n	</form>\r\n</div>';
 
 }
 return __p
@@ -85,11 +85,11 @@ return __p
 (function() {
 window["JST"] = window["JST"] || {};
 
-window["JST"]["views/login/templates/default.html"] = function(obj) {
+window["JST"]["views/generator/templates/default.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '';
 with (obj) {
-__p += '<div class="widget-login-container container-fluid">\r\n	<h3 class="step-header"><strong>{{= trans(\'STEP 1\') }}</strong> - {{= trans(\'Sign In\') }}</h3>\r\n	<form action="" class="widget-form">\r\n		<div class="input-group">\r\n			<div class="cg-xs-12">\r\n				<h3 class="form-error hidden"></h3>\r\n			</div>\r\n</div>\r\n		<div class="input-group">\r\n			<div class="cg-xs-12 cg-sm-offset-3 cg-sm-6">\r\n				<label for="email" class="sr-only">{{= trans(\'Email\') }}</label>\r\n				<input type="text" id="email" name="email" class="input-control" placeholder="{{= trans(\'Email\') }}"/>\r\n			</div>\r\n			<div class="cg-xs-12 cg-sm-offset-3 cg-sm-6">\r\n				<label for="password" class="sr-only">{{= trans(\'Password\') }}</label>\r\n				<input type="password" name="password" id="password" class="input-control" placeholder="{{= trans(\'Password\') }}"/>\r\n			</div>\r\n		</div>\r\n		<div class="input-group form-buttons">\r\n			<div class="cg-sm-6 cg-sm-offset-3 col-xs-12 text-center">\r\n				<button type="submit" class="btn-custom1 wide">\r\n					{{= trans(\'Sign In\') }}\r\n					<span class="step-arrow">\r\n						<img src="http://cdn.jackpotsstrategy.com/widget/images/arrow-big.png" alt=""/>\r\n					</span>\r\n				</button>\r\n				<hr/>\r\n				<div class="register-text text-center">{{= trans(\'New Customer?\') }} <a class="show-form" href="">{{= trans(\'Register Here\') }}</a></div>\r\n			</div>\r\n		</div>\r\n		<div class="input-group form-loading hidden">\r\n			<div class="cg-xs-12">\r\n				<div class="loading-text text-center"><strong>{{= trans(\'Please Wait\') }}</strong> {{= trans(\'your being logged in..\') }}</div>\r\n				<div class="spinner">\r\n					<div class="bounce1"></div>\r\n					<div class="bounce2"></div>\r\n					<div class="bounce3"></div>\r\n				</div>\r\n			</div>\r\n		</div>\r\n	</form>\r\n</div>';
+__p += '<div class="widget-generator container-fluid text">\r\n	<h3 class="step-header">{{= trans(\'STEP 4\') }} - <span>{{= trans(\'Generate & Checkout\') }}</span></h3>\r\n	<div class="step-body">\r\n		<div class="row">\r\n			<div class="cg-xs-12">\r\n				<div id="draws"></div>\r\n			</div>\r\n			<div class="cg-xs-12 text-center">\r\n				<div class="generating">\r\n					<div class="loading-text text-center"><strong>{{= trans(\'Please Wait\') }}</strong> {{= trans(\'While our algorithm is generating numbers\') }}</div>\r\n					<div class="spinner">\r\n						<div class="bounce1"></div>\r\n						<div class="bounce2"></div>\r\n						<div class="bounce3"></div>\r\n					</div>\r\n				</div>\r\n				<div class="checkout-loading hidden animated bounceIn">\r\n					<div class="loading-text text-center"><strong>{{= trans(\'Please Wait\') }}</strong> {{= trans(\'Numbers is being added to your cart\') }}</div>\r\n					<div class="spinner">\r\n						<div class="bounce1"></div>\r\n						<div class="bounce2"></div>\r\n						<div class="bounce3"></div>\r\n					</div>\r\n				</div>\r\n			</div>\r\n		</div>\r\n	</div>\r\n</div>';
 
 }
 return __p

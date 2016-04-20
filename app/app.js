@@ -7,8 +7,8 @@
 		this._views = {};
 		this._widgets = {};
 
-		// this.baseUrl = 'http://jackpotsstrategy.com';
-		this.baseUrl = 'http://localhost:8000';
+		this.baseUrl = 'http://jackpotsstrategy.com';
+		// this.baseUrl = 'http://localhost:8000';
 
 		_.templateSettings = {
 			interpolate: /\{\{=(.+?)\}\}/g,
