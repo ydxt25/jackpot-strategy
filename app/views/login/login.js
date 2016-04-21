@@ -3,7 +3,7 @@
  */
 widgetApp.addView('login', {
 	onShow: function() {
-		widgetApp.validator.validateRule('login', this.$el.find('form'));
+		widgetApp.validator.validateRule('login', this.options.language || 'en', this.$el.find('form'));
 	},
 	onRender: function() {
 

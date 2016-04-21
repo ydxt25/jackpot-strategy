@@ -39,4 +39,4 @@ $('.submit-signup').on('click', function (e) {
         }
     });
 
-}); (edited)
+});(edited)

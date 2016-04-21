@@ -1,42 +1,47 @@
 <div class="widget-login-container container-fluid">
-	<h3 class="step-header"><strong>{{= trans('STEP 1') }}</strong> - {{= trans('Sign In') }}</h3>
-	<form action="" class="widget-form">
-		<div class="input-group">
-			<div class="cg-xs-12">
-				<h3 class="form-error hidden"></h3>
-			</div>
-</div>
-		<div class="input-group">
-			<div class="cg-xs-12 cg-sm-offset-3 cg-sm-6">
-				<label for="email" class="sr-only">{{= trans('Email') }}</label>
-				<input type="text" id="email" name="email" class="input-control" placeholder="{{= trans('Email') }}"/>
-			</div>
-			<div class="cg-xs-12 cg-sm-offset-3 cg-sm-6">
-				<label for="password" class="sr-only">{{= trans('Password') }}</label>
-				<input type="password" name="password" id="password" class="input-control" placeholder="{{= trans('Password') }}"/>
-			</div>
-		</div>
-		<div class="input-group form-buttons">
-			<div class="cg-sm-6 cg-sm-offset-3 col-xs-12 text-center">
-				<button type="submit" class="btn-custom1 wide">
-					{{= trans('Sign In') }}
+    <h3 class="step-header"><strong>{{= trans('STEP 1') }}</strong> - {{= trans('Sign In') }}</h3>
+    <form action="" class="widget-form">
+        <div class="input-group">
+            <div class="cg-xs-12">
+                <h3 class="form-error hidden"></h3>
+            </div>
+        </div>
+        <div class="input-group">
+            <div class="cg-xs-12 cg-sm-offset-3 cg-sm-6">
+                <label for="email" class="sr-only">{{= trans('Email') }}</label>
+                <input type="text" id="email" name="email" class="input-control" placeholder="{{= trans('Email') }}"/>
+            </div>
+            <div class="cg-xs-12 cg-sm-offset-3 cg-sm-6">
+                <label for="password" class="sr-only">{{= trans('Password') }}</label>
+                <input type="password" name="password" id="password" class="input-control"
+                       placeholder="{{= trans('Password') }}"/>
+            </div>
+        </div>
+        <div class="input-group form-buttons">
+            <div class="cg-sm-6 cg-sm-offset-3 col-xs-12 text-center">
+                <button type="submit" class="btn-custom1 wide">
+                    {{= trans('Sign In') }}
 					<span class="step-arrow">
 						<img src="http://cdn.jackpotsstrategy.com/widget/images/arrow-big.png" alt=""/>
 					</span>
-				</button>
-				<hr/>
-				<div class="register-text text-center">{{= trans('New Customer?') }} <a class="show-form" href="">{{= trans('Register Here') }}</a></div>
-			</div>
-		</div>
-		<div class="input-group form-loading hidden">
-			<div class="cg-xs-12">
-				<div class="loading-text text-center"><strong>{{= trans('Please Wait') }}</strong> {{= trans('your being logged in..') }}</div>
-				<div class="spinner">
-					<div class="bounce1"></div>
-					<div class="bounce2"></div>
-					<div class="bounce3"></div>
-				</div>
-			</div>
-		</div>
-	</form>
+                </button>
+                <hr/>
+                <div class="register-text text-center">{{= trans('New Customer?') }} <a class="show-form" href="">
+                    {{= trans('Register Here') }}</a></div>
+            </div>
+        </div>
+        <div class="input-group form-loading hidden">
+            <div class="cg-xs-12">
+                <div class="loading-text text-center">
+                    <strong>{{= trans('Please Wait') }}</strong>
+                    {{= trans('your being logged in..') }}
+                </div>
+                <div class="spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
