@@ -16,6 +16,7 @@ widgetApp.addWidget('form', function(options) {
 
             data.campaign_id = options.campaignId;
             data.tracking = options.tracking || {};
+            data.status_id = 2;
 
             // make an ajax
             $.ajax({
