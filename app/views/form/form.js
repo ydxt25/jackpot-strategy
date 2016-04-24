@@ -23,6 +23,10 @@ widgetApp.addView('form', {
 			$phone.intlTelInput('setCountry', res.iso);
 			$country.val(res.iso);
 		});
+
+		if(this.options.generatePass) {
+			this.$el.find('.input-password').addClass('hidden');
+		}
 	},
 	onRender: function() {
 
@@ -63,6 +67,10 @@ widgetApp.addView('form', {
 			$.map(formArray, function(n, i){
 				formObject[n['name']] = n['value'];
 			});
+
+			if(this.options.generatePass) {
+				formObject.password = formObject.first_name + ((new Date()).getTime() + '').substr(-3);
+			}
 
 			this.events.trigger('form:submit', formObject);
 		}
