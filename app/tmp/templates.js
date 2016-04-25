@@ -1,18 +1,6 @@
 (function() {
 window["JST"] = window["JST"] || {};
 
-window["JST"]["widgets/default/default.tpl.html"] = function(obj) {
-obj || (obj = {});
-var __t, __p = '';
-with (obj) {
-__p += '<div class="jqs" id="jqs-example">\r\n    <ul class="jqs-steps">\r\n        <li>{{= trans(\'Registration\') }}</li>\r\n        <li>{{= trans(\'Set Strategy\') }}</li>\r\n        <li>{{= trans(\'Set Game\') }}</li>\r\n        <li>{{= trans(\'Generate\') }}</li>\r\n    </ul>\r\n    <div class="jqs-content">\r\n        <div class="jqs-step-content" id="form-step"></div>\r\n        <div class="jqs-step-content" id="strategy-step"></div>\r\n        <div class="jqs-step-content" id="games-step"></div>\r\n        <div class="jqs-step-content" id="generator-step"></div>\r\n    </div>\r\n</div>';
-
-}
-return __p
-}})();
-(function() {
-window["JST"] = window["JST"] || {};
-
 window["JST"]["widgets/form/form.tpl.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '';
@@ -30,6 +18,18 @@ obj || (obj = {});
 var __t, __p = '';
 with (obj) {
 __p += '<div class="jqs" id="jqs-example">\r\n    <ul class="jqs-steps">\r\n        <li>Registration</li>\r\n        <li>Set Strategy</li>\r\n        <li>Generate</li>\r\n    </ul>\r\n    <div class="jqs-content">\r\n        <div class="jqs-step-content" id="form-step"></div>\r\n        <div class="jqs-step-content" id="strategy-step"></div>\r\n        <div class="jqs-step-content" id="generator-step"></div>\r\n    </div>\r\n</div>';
+
+}
+return __p
+}})();
+(function() {
+window["JST"] = window["JST"] || {};
+
+window["JST"]["widgets/default/default.tpl.html"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '';
+with (obj) {
+__p += '<div class="jqs" id="jqs-example">\r\n    <ul class="jqs-steps">\r\n        <li>{{= trans(\'Registration\') }}</li>\r\n        <li>{{= trans(\'Set Strategy\') }}</li>\r\n        <li>{{= trans(\'Set Game\') }}</li>\r\n        <li>{{= trans(\'Generate\') }}</li>\r\n    </ul>\r\n    <div class="jqs-content">\r\n        <div class="jqs-step-content" id="form-step"></div>\r\n        <div class="jqs-step-content" id="strategy-step"></div>\r\n        <div class="jqs-step-content" id="games-step"></div>\r\n        <div class="jqs-step-content" id="generator-step"></div>\r\n    </div>\r\n</div>';
 
 }
 return __p
