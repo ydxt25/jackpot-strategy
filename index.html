@@ -54,9 +54,13 @@
 	$('#widget-el').TMLotto('form', {
 		campaignId: 1,
 		maxWidth: 800,
-		language: 'en',
+		language: 'no',
 		template: '1column',
-		generatePass: true
+		generatePass: true,
+		cplOptimization: true,
+		formValues: {
+			email: 'test@test.com'
+		}
 	});
 </script>
 </body>

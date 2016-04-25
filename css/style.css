@@ -4348,9 +4348,10 @@
       position: relative; }
       .widget-wrapper .widget-form-container .widget-form button {
         margin-top: 12px;
-        max-width: 210px;
         position: relative;
-        font-size: 16px; }
+        font-size: 16px;
+        width: auto !important;
+        padding: 0 50px; }
       .widget-wrapper .widget-form-container .widget-form .form-loading {
         margin-top: 26px; }
       .widget-wrapper .widget-form-container .widget-form label {
@@ -4373,7 +4374,7 @@
         .widget-wrapper .widget-form-container .widget-form .step-arrow img {
           background: #04214C;
           right: 6px;
-          top: -10px;
+          top: -16px;
           padding: 5px 7px; }
   .widget-wrapper .widget-login-container {
     padding-left: 0;
