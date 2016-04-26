@@ -1,6 +1,18 @@
 (function() {
 window["JST"] = window["JST"] || {};
 
+window["JST"]["widgets/default/default.tpl.html"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '';
+with (obj) {
+__p += '<div class="jqs" id="jqs-example">\r\n    <ul class="jqs-steps">\r\n        <li>{{= trans(\'Registration\') }}</li>\r\n        <li>{{= trans(\'Set Strategy\') }}</li>\r\n        <li>{{= trans(\'Set Game\') }}</li>\r\n        <li>{{= trans(\'Generate\') }}</li>\r\n    </ul>\r\n    <div class="jqs-content">\r\n        <div class="jqs-step-content" id="form-step"></div>\r\n        <div class="jqs-step-content" id="strategy-step"></div>\r\n        <div class="jqs-step-content" id="games-step"></div>\r\n        <div class="jqs-step-content" id="generator-step"></div>\r\n    </div>\r\n</div>';
+
+}
+return __p
+}})();
+(function() {
+window["JST"] = window["JST"] || {};
+
 window["JST"]["widgets/form/form.tpl.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '';
@@ -18,18 +30,6 @@ obj || (obj = {});
 var __t, __p = '';
 with (obj) {
 __p += '<div class="jqs" id="jqs-example">\r\n    <ul class="jqs-steps">\r\n        <li>Registration</li>\r\n        <li>Set Strategy</li>\r\n        <li>Generate</li>\r\n    </ul>\r\n    <div class="jqs-content">\r\n        <div class="jqs-step-content" id="form-step"></div>\r\n        <div class="jqs-step-content" id="strategy-step"></div>\r\n        <div class="jqs-step-content" id="generator-step"></div>\r\n    </div>\r\n</div>';
-
-}
-return __p
-}})();
-(function() {
-window["JST"] = window["JST"] || {};
-
-window["JST"]["widgets/default/default.tpl.html"] = function(obj) {
-obj || (obj = {});
-var __t, __p = '';
-with (obj) {
-__p += '<div class="jqs" id="jqs-example">\r\n    <ul class="jqs-steps">\r\n        <li>{{= trans(\'Registration\') }}</li>\r\n        <li>{{= trans(\'Set Strategy\') }}</li>\r\n        <li>{{= trans(\'Set Game\') }}</li>\r\n        <li>{{= trans(\'Generate\') }}</li>\r\n    </ul>\r\n    <div class="jqs-content">\r\n        <div class="jqs-step-content" id="form-step"></div>\r\n        <div class="jqs-step-content" id="strategy-step"></div>\r\n        <div class="jqs-step-content" id="games-step"></div>\r\n        <div class="jqs-step-content" id="generator-step"></div>\r\n    </div>\r\n</div>';
 
 }
 return __p
@@ -65,7 +65,7 @@ window["JST"]["views/games/templates/default.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '';
 with (obj) {
-__p += '<div class="widget-game-container container-fluid">\r\n	<h3 class="step-header">{{= trans(\'STEP 3\') }} - <span>{{= trans(\'Select Game\') }}</span></h3>\r\n	<div class="step-body">\r\n		<div class="owl-carousel owl-theme games-box-container">\r\n			{{ _.each(games, function(game) { }}\r\n			<div class="game-box">\r\n				<img class="clock-image" src="http://cdn.jackpotsstrategy.com/widget/images/clock.png" alt=""/>\r\n				<div class="box-content">\r\n					<div class="time-left game-timer" data-time="{{= game.endDate.getTime() }}"></div>\r\n					<div class="jackpot">{{= game.jackpot }}</div>\r\n					<div class="game-logo">\r\n						<img src="http://cdn.jackpotsstrategy.com/widget/images/{{= game.systemName }}.png" alt=""/>\r\n					</div>\r\n				</div>\r\n				<button type="button" data-game="{{= game.systemName }}" class="select-game-btn btn btn-custom1">{{= trans(\'Generate\') }}</button>\r\n			</div>\r\n			{{ }); }}\r\n		</div>\r\n	</div>\r\n</div>';
+__p += '<div class="widget-game-container container-fluid">\r\n	<h3 class="step-header">{{= trans(\'STEP 3\') }} - <span>{{= trans(\'Select Game\') }}</span></h3>\r\n	<div class="step-body">\r\n		<div class="owl-carousel owl-theme games-box-container">\r\n			{{ _.each(games, function(generatorGame) { }}\r\n			{{ var game = generator.getGame(generatorGame.system_name) }}\r\n			<div class="game-box">\r\n				<img class="clock-image" src="http://cdn.jackpotsstrategy.com/widget/images/clock.png" alt=""/>\r\n				<div class="box-content">\r\n					<div class="time-left game-timer" data-time="{{= game.endDate.getTime() }}"></div>\r\n					<div class="jackpot">{{= game.jackpot }}</div>\r\n					<div class="game-logo">\r\n						<img src="http://cdn.jackpotsstrategy.com/widget/images/{{= game.systemName }}.png" alt=""/>\r\n					</div>\r\n				</div>\r\n				<button type="button" data-game="{{= game.systemName }}" class="select-game-btn btn btn-custom1">{{= trans(\'Generate\') }}</button>\r\n			</div>\r\n			{{ }); }}\r\n		</div>\r\n	</div>\r\n</div>';
 
 }
 return __p

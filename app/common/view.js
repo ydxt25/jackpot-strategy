@@ -10,7 +10,7 @@
 
 	View.prototype.render = function() {
 		var self = this;
-		var viewOptions = this.viewCallbacks.templateHelpers ? this.viewCallbacks.templateHelpers() : {};
+		var viewOptions = this.viewCallbacks.templateHelpers ? this.viewCallbacks.templateHelpers.apply(this, []) : {};
 		viewOptions.trans = function(key) {
 			return self.translate(key);
 		};

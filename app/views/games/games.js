@@ -13,10 +13,10 @@ widgetApp.addView('games', {
                     items:2
                 },
                 600:{
-                    items:3
+                    items: this.options.games > 3 ? 3 : this.options.games.length
                 },
                 1000:{
-                    items:4
+                    items: this.options.games > 4 ? 4 : this.options.games.length
                 }
             }
         });
@@ -45,9 +45,11 @@ widgetApp.addView('games', {
         })
     },
     templateHelpers: function() {
+        console.log(this);
         return {
-            games: Generators.getGames()
-        }    
+            games: this.options.games,
+            generator: Generators
+        }
     },
     onRender: function() {
 

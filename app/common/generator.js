@@ -9,6 +9,9 @@
         },
         getGames: function() {
             return window.Generators.games;
+        },
+        getGame: function(game) {
+            return window.Generators.games[game];
         }
     };
 
