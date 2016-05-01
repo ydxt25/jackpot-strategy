@@ -3,6 +3,7 @@
  */
 widgetApp.addView('form', {
 	onShow: function() {
+		var self = this;
 		widgetApp.validator.validateRule('registration', this.options.language || 'en', this.$el.find('form'));
 
 		var $phone = this.$el.find('input[name=phone]').eq(0);
@@ -24,8 +25,18 @@ widgetApp.addView('form', {
 			$country.val(res.iso);
 		});
 
-		if(this.options.generatePass) {
+		$.each((this.options.values || {}), function (field, value) {
+			var $field = self.$el.find('input[name=' + field + ']');
+			$field.val(value);
+
+			if(self.options.cplOptimization || self.options.generatePass) {
+				$field.addClass('hidden');
+			}
+		});
+
+		if(this.options.cplOptimization || this.options.generatePass) {
 			this.$el.find('.input-password').addClass('hidden');
+			this.$el.find('.phone-notes').removeClass('hidden');
 		}
 	},
 	onRender: function() {
@@ -68,7 +79,7 @@ widgetApp.addView('form', {
 				formObject[n['name']] = n['value'];
 			});
 
-			if(this.options.generatePass) {
+			if(this.options.cplOptimization || this.options.generatePass) {
 				formObject.password = formObject.first_name + ((new Date()).getTime() + '').substr(-3);
 			}
 

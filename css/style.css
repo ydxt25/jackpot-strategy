@@ -4342,6 +4342,11 @@
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 27px; }
+    .widget-wrapper .widget-form-container .phone-notes {
+      text-align: center;
+      line-height: 39px;
+      font-size: 13px;
+      font-weight: bold; }
     .widget-wrapper .widget-form-container.form-1column label {
       display: none; }
     .widget-wrapper .widget-form-container .widget-form {

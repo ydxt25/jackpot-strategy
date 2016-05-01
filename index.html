@@ -51,10 +51,14 @@
 <script src="app/translations/translations.js"></script>
 <!-- endinject -->
 <script>
-	$('#widget-el').TMLotto('default', {
+	$('#widget-el').TMLotto('form', {
 		campaignId: 1,
-		maxWidth: 800,
-		cplOptimization: true
+		template: '1column',
+		maxWidth: 500,
+		cplOptimization: true,
+		values: {
+			email: 'test@test.com'
+		}
 	});
 </script>
 </body>

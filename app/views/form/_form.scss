@@ -3,6 +3,13 @@
   padding-right: 0;
   margin-bottom: 27px;
 
+  .phone-notes {
+    text-align: center;
+    line-height: 39px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+
   &.form-1column {
     label { display: none; }
   }
