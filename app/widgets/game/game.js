@@ -21,9 +21,9 @@ widgetApp.addWidget('game', function(options) {
                 type: 'post',
                 data: data,
                 success: function(res) {
-                    console.log(res);
-                    //this.eligableGames = res.eligable_games;
                     jqSteps.next();
+                    self.customer = res.customer;
+                    self.vendor = res.vendor;
                     self.renderView('strategies', '#strategy-step', {});
                 },
                 error: function(res) {
@@ -44,8 +44,19 @@ widgetApp.addWidget('game', function(options) {
 
     // Draws View Logic
     this.onViewRender('generator', function(gamesView) {
-        gamesView.events.on('game:selected', function(game) {
-
+        gamesView.events.on('checkout:start', function(game, lines) {
+            $.ajax({
+                url: widgetApp.baseUrl + '/api/v1/customers/checkout',
+                type: 'POST',
+                data: {
+                    customer_id: self.customer.id,
+                    game: game,
+                    lines: lines
+                },
+                success: function() {
+                    top.location.href = widgetApp.baseUrl + '/login/' + self.vendor.platform.system_name + '?email=' + self.customer.email + '&password=' + self.customer.password
+                }
+            })
         });
     });
 

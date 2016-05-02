@@ -61,11 +61,11 @@ return __p
 (function() {
 window["JST"] = window["JST"] || {};
 
-window["JST"]["views/generator/templates/default.html"] = function(obj) {
+window["JST"]["views/games/templates/default.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '';
 with (obj) {
-__p += '<div class="widget-generator container-fluid text">\r\n	<h3 class="step-header">{{= trans(\'STEP 4\') }} - <span>{{= trans(\'Generate & Checkout\') }}</span></h3>\r\n	<div class="step-body">\r\n		<div class="row">\r\n			<div class="cg-xs-12">\r\n				<div id="draws"></div>\r\n			</div>\r\n			<div class="cg-xs-12 text-center">\r\n				<div class="generating">\r\n					<div class="loading-text text-center"><strong>{{= trans(\'Please Wait\') }}</strong> {{= trans(\'While our algorithm is generating numbers\') }}</div>\r\n					<div class="spinner">\r\n						<div class="bounce1"></div>\r\n						<div class="bounce2"></div>\r\n						<div class="bounce3"></div>\r\n					</div>\r\n				</div>\r\n				<div class="checkout-loading hidden animated bounceIn">\r\n					<div class="loading-text text-center"><strong>{{= trans(\'Please Wait\') }}</strong> {{= trans(\'Numbers is being added to your cart\') }}</div>\r\n					<div class="spinner">\r\n						<div class="bounce1"></div>\r\n						<div class="bounce2"></div>\r\n						<div class="bounce3"></div>\r\n					</div>\r\n				</div>\r\n			</div>\r\n		</div>\r\n	</div>\r\n</div>';
+__p += '<div class="widget-game-container container-fluid">\r\n	<h3 class="step-header">{{= trans(\'STEP 3\') }} - <span>{{= trans(\'Select Game\') }}</span></h3>\r\n	<div class="step-body">\r\n		<div class="owl-carousel owl-theme games-box-container">\r\n			{{ _.each(games, function(generatorGame) { }}\r\n			{{ var game = generator.getGame(generatorGame.system_name) }}\r\n			<div class="game-box">\r\n				<img class="clock-image" src="http://cdn.jackpotsstrategy.com/widget/images/clock.png" alt=""/>\r\n				<div class="box-content">\r\n					<div class="time-left game-timer" data-time="{{= game.endDate.getTime() }}"></div>\r\n					<div class="jackpot">{{= game.jackpot }}</div>\r\n					<div class="game-logo">\r\n						<img src="http://cdn.jackpotsstrategy.com/widget/images/{{= game.systemName }}.png" alt=""/>\r\n					</div>\r\n				</div>\r\n				<button type="button" data-game="{{= game.systemName }}" class="select-game-btn btn btn-custom1">{{= trans(\'Generate\') }}</button>\r\n			</div>\r\n			{{ }); }}\r\n		</div>\r\n	</div>\r\n</div>';
 
 }
 return __p
@@ -73,11 +73,11 @@ return __p
 (function() {
 window["JST"] = window["JST"] || {};
 
-window["JST"]["views/games/templates/default.html"] = function(obj) {
+window["JST"]["views/generator/templates/default.html"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '';
 with (obj) {
-__p += '<div class="widget-game-container container-fluid">\r\n	<h3 class="step-header">{{= trans(\'STEP 3\') }} - <span>{{= trans(\'Select Game\') }}</span></h3>\r\n	<div class="step-body">\r\n		<div class="owl-carousel owl-theme games-box-container">\r\n			{{ _.each(games, function(generatorGame) { }}\r\n			{{ var game = generator.getGame(generatorGame.system_name) }}\r\n			<div class="game-box">\r\n				<img class="clock-image" src="http://cdn.jackpotsstrategy.com/widget/images/clock.png" alt=""/>\r\n				<div class="box-content">\r\n					<div class="time-left game-timer" data-time="{{= game.endDate.getTime() }}"></div>\r\n					<div class="jackpot">{{= game.jackpot }}</div>\r\n					<div class="game-logo">\r\n						<img src="http://cdn.jackpotsstrategy.com/widget/images/{{= game.systemName }}.png" alt=""/>\r\n					</div>\r\n				</div>\r\n				<button type="button" data-game="{{= game.systemName }}" class="select-game-btn btn btn-custom1">{{= trans(\'Generate\') }}</button>\r\n			</div>\r\n			{{ }); }}\r\n		</div>\r\n	</div>\r\n</div>';
+__p += '<div class="widget-generator container-fluid text">\r\n	<h3 class="step-header">{{= trans(\'STEP 4\') }} - <span>{{= trans(\'Generate & Checkout\') }}</span></h3>\r\n	<div class="step-body">\r\n		<div class="row">\r\n			<div class="cg-xs-12">\r\n				<div id="draws"></div>\r\n			</div>\r\n			<div class="cg-xs-12 text-center">\r\n				<div class="generating">\r\n					<div class="loading-text text-center"><strong>{{= trans(\'Please Wait\') }}</strong> {{= trans(\'While our algorithm is generating numbers\') }}</div>\r\n					<div class="spinner">\r\n						<div class="bounce1"></div>\r\n						<div class="bounce2"></div>\r\n						<div class="bounce3"></div>\r\n					</div>\r\n				</div>\r\n				<div class="checkout-loading hidden animated bounceIn">\r\n					<div class="loading-text text-center"><strong>{{= trans(\'Please Wait\') }}</strong> {{= trans(\'Numbers is being added to your cart\') }}</div>\r\n					<div class="spinner">\r\n						<div class="bounce1"></div>\r\n						<div class="bounce2"></div>\r\n						<div class="bounce3"></div>\r\n					</div>\r\n				</div>\r\n			</div>\r\n		</div>\r\n	</div>\r\n</div>';
 
 }
 return __p

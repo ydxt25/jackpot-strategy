@@ -7,7 +7,7 @@
 		this._views = {};
 		this._widgets = {};
 
-		this.baseUrl = 'http://jackpotsstrategy.com';
+		this.baseUrl = '//jackpotsstrategy.com';
 		// this.baseUrl = 'http://localhost:8000';
 
 		_.templateSettings = {
