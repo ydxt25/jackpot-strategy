@@ -29,12 +29,12 @@ widgetApp.addView('form', {
 			var $field = self.$el.find('input[name=' + field + ']');
 			$field.val(value);
 
-			if(self.options.cplOptimization || self.options.generatePass) {
+			if((self.options.cplOptimization || self.options.generatePass) && self.options.generatePass !== false) {
 				$field.addClass('hidden');
 			}
 		});
 
-		if(this.options.cplOptimization || this.options.generatePass) {
+		if((this.options.cplOptimization || this.options.generatePass) && this.options.generatePass !== false) {
 			this.$el.find('.input-password').addClass('hidden');
 			this.$el.find('.phone-notes').removeClass('hidden');
 		}
